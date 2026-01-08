@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "apiconectada",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "xp",
+          "database_id": "51bc27cd-ffca-4b78-b4bc-bf0a45912bea"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "515dba92d7c949f09b8f9fa46d426a06",
+            "binding": "SECRET",
+            "secret_name": "APIConectora"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
